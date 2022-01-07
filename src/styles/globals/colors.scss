@@ -1,12 +1,15 @@
 //Colors
 
-$accent-color: hsl(194, 24%, 41%);
+$dark-color: hsl(194, 45%, 22%);
 $first-color-for-gradient: hsl(360, 72%, 65%);
 $second-color-for-gradient: hsl(235, 62%, 73%);
+$white: hsl(0, 0%, 96%);
+$black: hsla(0, 100%, 2%, 40%);
 
 :root {
-    --primary-bg-color: #fff;
-    --text-color: #{$accent-color};
+    --primary-bg-color: #{$white};
+    --text-color: #{$dark-color};
+    --loading-bg-color: #{$black};
 }
 
 @mixin gradient($attribute) {

@@ -1,7 +1,9 @@
 const Header = () => {
     return ( 
         <>
-            <h1 className="title">Tours project</h1>
+        <div className="header-container">
+            <h1 className="main-title">NewCity Tours</h1>
+        </div>
         </>
      );
 }

@@ -1,6 +1,7 @@
 @use '../utils' as *;
 @use '../globals/colors.scss' as mixin;
 
-.title {
+.app {
     @include mixin.gradient(background);
+    height: 100vh;
 }
