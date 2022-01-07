@@ -1,3 +1,48 @@
 .tours-container {
-    background: var(--primary-bg-color);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 3rem;
+    
+    .tour {
+        padding: 2rem;
+        margin: 0 auto;
+        background: var(--primary-bg-color);
+        margin-bottom: 1rem;
+        box-shadow: 1px 3px 6px rgba(20,20,20,0.3);
+        max-width: 50rem;
+
+        &_title {
+            margin: 1rem;
+            text-align: center;
+        }
+
+        &_image {
+            width: 70%;
+            background-size: contain;
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+
+        &_text {
+            max-width: 70%;
+            margin: 0 auto;
+            margin-top: .5rem;
+            font-family: var(--font-secondary);
+        }
+        
+        &_price {
+            font-size: 1.1rem;
+            font-weight: var(--font-semi-bold);
+            color: var(--accent-color);
+            text-align: right;
+            max-width: 70%;
+            margin: 0 auto;
+            
+            span {
+                font-size: 1.5rem;
+                font-weight: var(--font-semi-bold);
+            }
+        }
+    }
 }
