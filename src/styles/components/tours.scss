@@ -31,17 +31,23 @@
             font-family: var(--font-secondary);
         }
         
-        &_price {
-            font-size: 1.1rem;
-            font-weight: var(--font-semi-bold);
-            color: var(--accent-color);
-            text-align: right;
+        &_footer {
+            display: flex;
+            justify-content: space-between;
             max-width: 70%;
             margin: 0 auto;
-            
-            span {
-                font-size: 1.5rem;
+            text-align: right;
+            margin-top: 1rem;
+
+            .tour_price {
+                font-size: 1.1rem;
                 font-weight: var(--font-semi-bold);
+                color: var(--accent-color);
+                
+                span {
+                    font-size: 1.5rem;
+                    font-weight: var(--font-semi-bold);
+                }
             }
         }
     }

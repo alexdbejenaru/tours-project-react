@@ -1,6 +1,9 @@
 .header-container {
+    max-width: 1366px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 
     .main-title {
     font-weight: var(--font-semi-bold);
@@ -8,4 +11,27 @@
     color: var(--text-color);
     margin-top: 1rem;
     }
+
+}
+
+.cta-button {
+    border-radius: 25px;
+    height: 3rem;
+    width: 9rem;
+    background-color: var(--accent-color);
+    border: none;
+    box-shadow: 1px 3px 6px rgba(20,20,20,0.3);
+    color: var(--primary-bg-color);
+    
+    &:hover {
+        cursor: pointer;
+        background-color: var(--primary-bg-color);
+        color: var(--text-color);
+        font-weight: var(--font-semi-bold);
+    }
+}
+
+.delete-btn {
+    height: 2.5rem;
+    width: 7rem;
 }
