@@ -1,1 +1,6 @@
 @use '../utils' as *;
+@use '../globals/colors.scss' as mixin;
+
+.title {
+    @include mixin.gradient(background);
+}

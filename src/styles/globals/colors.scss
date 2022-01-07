@@ -1,3 +1,14 @@
+//Colors
+
+$accent-color: hsl(194, 24%, 41%);
+$first-color-for-gradient: hsl(360, 72%, 65%);
+$second-color-for-gradient: hsl(235, 62%, 73%);
+
 :root {
     --primary-bg-color: #fff;
+    --text-color: #{$accent-color};
+}
+
+@mixin gradient($attribute) {
+    #{$attribute}: linear-gradient($first-color-for-gradient, $second-color-for-gradient);
 }
