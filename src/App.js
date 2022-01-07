@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import Header from "./components/Header";
-import Loading from "./components/Loading";
-import Tours from "./components/Tours";
+import Homepage from "./pages/Homepage";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import CreateTour from "./pages/CreateTour";
 
 
 function App() {
   const url = 'https://my-travel-tours-api.herokuapp.com/tours';
-  const [ data, setData ] = useState(null);
+  const [ data, setData ] = useState([]);
   const [ loading, setLoading ] = useState(true);
   const [ error, setError ] = useState(false);
   
@@ -36,16 +36,12 @@ function App() {
 
   return (
     <>
-    {loading && <Loading />}
-    {error && <div>{ error }</div>}
-    {data && (
-      <main className="app">
-        <section className="app_container">
-          <Header />
-          <Tours data={ data }/>
-        </section>
-      </main>
-    )}
+      <Router>
+        <Routes>
+          <Route path="/" exact element={<Homepage loading={ loading } error={ error } data={ data } />} />
+          <Route path="/create" element={<CreateTour />} />
+        </Routes>
+      </Router>
     </>
   );
 }

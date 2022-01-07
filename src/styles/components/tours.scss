@@ -29,6 +29,13 @@
             margin: 0 auto;
             margin-top: .5rem;
             font-family: var(--font-secondary);
+
+        }
+
+        .show-more-btn {
+            color: blue;
+            cursor: pointer;
+            font-weight: var(--font-semi-bold);
         }
         
         &_footer {
