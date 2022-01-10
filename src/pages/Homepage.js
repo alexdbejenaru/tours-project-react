@@ -13,7 +13,7 @@ const Homepage = ({ fetchTours, removeTour, loading, error, data}) => {
             <main className="app">
                 <section className="app_container">
                 <Header />
-                <Tours removeTour={removeTour} data={ data }/>
+                <Tours fetchTours={ fetchTours } removeTour={removeTour} data={ data }/>
                 </section>
             </main>
             )}
