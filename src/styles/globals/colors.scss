@@ -6,12 +6,15 @@ $second-color-for-gradient: hsl(360, 72%, 65%);
 $white: hsl(0, 0%, 96%);
 $black: hsla(0, 100%, 2%, 40%);
 $red: rgb(158, 63, 63);
+$lighter-blueish-color: lighten(hsl(235, 62%, 73%), 3%);
 
 :root {
     --primary-bg-color: #{$white};
     --text-color: #{$dark-color};
     --loading-bg-color: #{$black};
     --accent-color: #{$red};
+    --input-bg-color: #{$first-color-for-gradient};
+    --lighter-input-bg-color: #{$lighter-blueish-color};
 }
 
 @mixin gradient($attribute) {

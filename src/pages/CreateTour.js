@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const CreateTour = ({ rerender }) => {
     const [ name, setName ] = useState('');
@@ -28,30 +28,36 @@ const CreateTour = ({ rerender }) => {
     }
 
     return ( 
-        <>
+        <section className="create-container">
             <div className="create">
-                <h2 className="create-tour-title">Add a new tour</h2>
-                <form onSubmit={handleSubmit}>
-                    <label>Tour title:</label>
+                <div className="create_header">
+                    <h2 className="create_header__title">Add a new tour</h2>
+                    <Link to="/" href="/"><button className="cta-button create_header__btn">Go back to Homepage</button></Link>
+                </div>
+                <form className="create_form" onSubmit={handleSubmit}>
+                    <label>Tour title</label>
                     <input value={ name } onChange={(e) => setName(e.target.value)} type="text" required />
-                    <label>Tour info:</label>
+                    <label>Tour info</label>
                     <textarea
+                    rows="6"
                         required
                         value={ info }
                         onChange={(e) => setInfo(e.target.value)}></textarea>
-                    <label>Image URL:</label>
+                    <label>Image URL</label>
                     <input value={ image } onChange={(e) => setImage(e.target.value)} type="text" required />
-                    <label>Price:</label>
+                    <label>Price</label>
                     <input value={ price } onChange={(e) => setPrice(e.target.value)} type="number" required />
-                    { !isPending && <button>Add tour</button> }
-                    { isPending && <button disabled>Adding tour...</button> }
-                    <p>{ name }</p>
-                    <p>{ info }</p>
-                    <p>{ image }</p>
-                    <p>{ price }</p>
+                    { !isPending && <button className="cta-button create_form__button">Add tour</button> }
+                    { isPending && <button className="cta-button create_form__button" disabled>Adding tour...</button> }
                 </form>
+                <div className="create_preview">
+                    <h2 className="create_preview__title">Preview</h2>
+                    <p className="create_preview__fields"><span>Title: </span>{ name }</p>
+                    <p className="create_preview__fields"><span>Info about tour: </span>{ info }</p>
+                    <p className="create_preview__fields"><span>Price: </span>{ price }</p>
+                </div>
             </div>
-        </>
+        </section>
      );
 }
  

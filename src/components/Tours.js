@@ -1,12 +1,12 @@
 import Tour from "./Tour";
 
-const Tours = ({ data }) => {
+const Tours = ({ removeTour, data }) => {
     const tours = data;
     return ( 
         <>
             <div className="tours-container">
                 {tours.map((tour, index) => (
-                    <Tour index={ index } tour={ tour }/>
+                    <Tour removeTour={ removeTour } index={ index } tour={ tour }/>
                 ))}
             </div>
         </>

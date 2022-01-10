@@ -34,11 +34,16 @@ function App() {
     fetchTours();
   }, [])
 
+  const removeTour = id => {
+    const newTours = data.filter(tour => tour.id !== id);
+    setData(newTours);
+  }
+
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/" exact element={<Homepage loading={ loading } error={ error } data={ data } />} />
+          <Route path="/" exact element={<Homepage fetchTours={ fetchTours } loading={ loading } error={ error } data={ data } removeTour={removeTour} />} />
           <Route path="/create" element={<CreateTour />} />
         </Routes>
       </Router>

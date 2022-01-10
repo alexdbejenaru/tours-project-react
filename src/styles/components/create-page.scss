@@ -1,0 +1,67 @@
+@use '../globals/colors.scss' as mixin;
+
+.create-container {
+    @include mixin.gradient(background);
+    min-height: 100vh;
+    
+    .create {
+        max-width: 85.375rem;
+        margin: 0 auto;
+
+        &_header {
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        &_form {
+            font-family: var(--font-secondary);
+            display: flex;
+            flex-direction: column;
+            max-width: 50%;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 2rem;
+
+            input, textarea {
+                border-radius: 7px;
+                border: none;
+                padding: .5rem;
+                background: var(--input-bg-color);
+                box-shadow: inset 0 0 10px #000000;
+                margin-bottom: 1rem;
+
+                &:hover {
+                    background: var(--lighter-input-bg-color);
+                }
+            }
+
+            &__button {
+                margin: 0 auto;
+                margin-top: 1rem;
+            }
+        }
+
+        &_preview {
+            display: flex;
+            flex-direction: column;
+            font-family: var(--font-secondary);
+            margin:0 auto;
+            margin-top: 2rem;
+            max-width: 1366px;
+            padding: 1rem;
+
+            &__title {
+                margin-bottom: 1rem;
+                font-family: var(--font-general);
+            }
+
+            &__fields {
+                margin-bottom: .5rem;
+
+                span {
+                    font-weight: var(--font-semi-bold);
+                }
+            }
+        }
+    }
+}
