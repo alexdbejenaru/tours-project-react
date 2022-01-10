@@ -9,14 +9,14 @@ const Homepage = ({ fetchTours, removeTour, loading, error, data}) => {
             {loading && <Loading />}
             {error && <div>{ error }</div>}
             {data.length === 0 && <NoTours fetchTours={ fetchTours }/>}
-            {data && (
+            {data && data.length!==0 ? (
             <main className="app">
                 <section className="app_container">
                 <Header />
                 <Tours fetchTours={ fetchTours } removeTour={removeTour} data={ data }/>
                 </section>
             </main>
-            )}
+            ) : <></>}
         </>
     );
 }
