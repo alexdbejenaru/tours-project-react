@@ -55,7 +55,7 @@ const CreateTour = ({ fetchTours }) => {
                     <h2 className="create_preview__title">Preview</h2>
                     <p className="create_preview__fields"><span>Title: </span>{ name }</p>
                     <p className="create_preview__fields"><span>Info about tour: </span>{ info }</p>
-                    <p className="create_preview__fields"><span>Price: </span>{ price }</p>
+                    <p className="create_preview__fields"><span>Price: </span>{ price }<span>$</span></p>
                 </div>
             </div>
         </section>
