@@ -43,8 +43,8 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" exact element={<Homepage fetchTours={ fetchTours } loading={ loading } error={ error } data={ data } removeTour={removeTour} />} />
-          <Route path="/create" element={<CreateTour />} />
+          <Route path="/" exact element={<Homepage fetchTours={ fetchTours } loading={ loading } error={ error } data={ data } removeTour={ removeTour } />} />
+          <Route path="/create" element={<CreateTour fetchTours={ fetchTours }/>} />
         </Routes>
       </Router>
     </>

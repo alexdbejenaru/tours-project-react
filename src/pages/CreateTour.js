@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const CreateTour = ({ rerender }) => {
+const CreateTour = ({ fetchTours }) => {
     const [ name, setName ] = useState('');
     const [ info, setInfo ] = useState('');
     const [ image, setImage ] = useState('');
@@ -24,6 +24,7 @@ const CreateTour = ({ rerender }) => {
             console.log('new blog added');
             setIsPending(false);
             navigate('/', { replace: true });
+            fetchTours();
         })
     }
 
