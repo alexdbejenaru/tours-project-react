@@ -10,7 +10,7 @@ const Tour = ({ removeTour, tour }) => {
                 {readMore ? tour.info : `${tour.info.substring(0, 200)}...`}<span className="show-more-btn" onClick={() => setReadMore(!readMore)}>{readMore ? ' Show less' : ' Read more...'}</span>
             </p>
             <div className="tour_footer">
-                <button onClick={() => removeTour(tour.id)} className="cta-button delete-btn">Delete tour</button>
+                <button onClick={() => removeTour(tour.id)} className="cta-button delete-btn">Not interested</button>
                 <p className="tour_price">{tour.price}<span>$</span></p>
             </div>
         </div>
